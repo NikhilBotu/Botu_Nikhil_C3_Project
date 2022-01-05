@@ -31,6 +31,8 @@ public class Restaurant {
         }
 
     }
+
+    //method implemented for getting total order value
     public int getTotalOrderValue(List<String> itemName) throws itemNotFoundException {
         int totalValue = 0;
         for (String item : itemName) {
@@ -43,7 +45,7 @@ public class Restaurant {
 
     public List<Item> getMenu() {
         return menu;
-        //DELETE ABOVE RETURN STATEMENT AND WRITE CODE HERE
+        
     }
 
     private Item findItemByName(String itemName){
