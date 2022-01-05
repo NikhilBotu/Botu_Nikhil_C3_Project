@@ -26,7 +26,7 @@ class RestaurantTest {
     //-------FOR THE 2 TESTS BELOW, YOU MAY USE THE CONCEPT OF MOCKING, IF YOU RUN INTO ANY TROUBLE
     @Test
     public void is_restaurant_open_should_return_true_if_time_is_between_opening_and_closing_time() {
-        //WRITE UNIT TEST CASE HERE
+        
           Restaurant spiedRestaurant=Mockito.spy(restaurant);
           LocalTime restaurant_open = LocalTime.parse("12:30:00");
           Mockito.when(spiedRestaurant.getCurrentTime()).thenReturn(restaurant_open);
@@ -42,9 +42,9 @@ class RestaurantTest {
         Mockito.when(spiedRestaurant.getCurrentTime()).thenReturn(restaurant_open);
         assertFalse(spiedRestaurant.isRestaurantOpen());
     }
-
+     
+     //test case implemented for getting total order value
     @Test
-
     public void select_items_which_are_present_in_menu_then_return_orderTotal(){
         List<String> itemName= Arrays.asList("Sweet corn soup","Vegetable lasagne");
         restaurantDetails();
